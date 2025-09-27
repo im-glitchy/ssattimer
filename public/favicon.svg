@@ -1,0 +1,45 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 36 36"
+  fill="none"
+>
+  <!-- Gradient defs -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>   <!-- from-blue-600 -->
+      <stop offset="100%" stop-color="#4f46e5"/> <!-- to-indigo-600 -->
+    </linearGradient>
+  </defs>
+
+  <!-- Background square with rounded corners -->
+  <rect
+    x="0"
+    y="0"
+    width="36"
+    height="36"
+    rx="8"
+    ry="8"
+    fill="url(#grad)"
+  />
+
+  <!-- Graduation cap (centered) -->
+  <svg
+    x="6"
+    y="6"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="white"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <!-- Cap (mortarboard) -->
+    <path d="M22 10 12 15 2 10 12 5 22 10Z"/>
+    <!-- Headband -->
+    <path d="M6 12v4.5c0 .8.3 1.5.8 2 2.9 2.5 7.7 2.5 10.6 0 .5-.5.8-1.2.8-2V12"/>
+    <!-- Tassel at final position -->
+    <path d="M22 10.5v6.1"/>
+  </svg>
+</svg>

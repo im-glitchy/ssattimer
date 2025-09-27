@@ -1,0 +1,42 @@
+{
+  "name": "TimerSession",
+  "type": "object",
+  "properties": {
+    "section_name": {
+      "type": "string",
+      "description": "Name of the SSAT section"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Duration of the section in minutes"
+    },
+    "time_remaining": {
+      "type": "number",
+      "description": "Time remaining in seconds"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "running",
+        "paused",
+        "completed"
+      ],
+      "default": "not_started"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the timer was started"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the timer was completed"
+    }
+  },
+  "required": [
+    "section_name",
+    "duration_minutes"
+  ]
+}
