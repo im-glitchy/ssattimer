@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SSAT Timer
+
+This repo contains a Next.js app (SSAT Timer). The project includes a GitHub Actions workflow to build the project, run `next export`, and publish the resulting `out/` static site to the `gh-pages` branch for GitHub Pages.
 
 ## Getting Started
 
@@ -34,3 +36,30 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Build & export (for GitHub Pages)
+
+```bash
+npm ci
+npm run build
+npm run export
+# ./out contains static site
+```
+
+## Deployment
+
+- The workflow at `.github/workflows/deploy-gh-pages.yml` will run on `push` to `main`, build the project, export it to `out/`, and publish to the `gh-pages` branch.
+
+If you have problems with asset paths on GitHub Pages (site served under `https://USERNAME.github.io/REPO-NAME/`), you may need to set `basePath` and `assetPrefix` in `next.config.js`. Example:
+
+```js
+// next.config.js
+module.exports = {
+  basePath: '/REPO-NAME',
+  assetPrefix: '/REPO-NAME/',
+};
+```
+
+## Notes
+
+- If your app uses Next.js server-only features (App Router server components that need server runtime, API routes, or middleware), `next export` may not work — use Vercel instead.
