@@ -42,7 +42,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ```bash
 npm ci
 npm run build
-npm run export
+# `next.config.js` should include `output: 'export'` so `npm run build` produces the static `./out` folder
 # ./out contains static site
 ```
 
